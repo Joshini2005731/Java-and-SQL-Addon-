@@ -1,0 +1,43 @@
+package addon;
+
+public class TASK2 {
+
+ public int sum(int a, int b) {
+
+	        int result = a + b;
+
+	        System.out.println("Sum of integers: " + result);
+
+	        return result;
+
+	    }
+
+	    public double sum(double a, double b) {
+
+	        double result = a + b;
+
+	        System.out.println("Sum of doubles: " + result);
+
+	        return result;
+
+	    } 
+
+	    public void sum() {
+
+	        sum(20, 50);         
+
+	        sum(20.5, 30.5);      
+
+	    }
+
+	    public static void main(String[] args) {
+
+	        TASK2 demo = new TASK2();
+
+	        demo.sum();  
+
+	    }
+
+	}
+	
+	
