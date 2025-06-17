@@ -1,7 +1,6 @@
 CREATE TABLE Students (
     student_id int PRIMARY KEY,
     name varchar(50),
-    last_name varchar(50),
     email VARCHAR(100) UNIQUE,
     enrollment_year int
 );
