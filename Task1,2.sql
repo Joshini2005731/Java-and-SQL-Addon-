@@ -25,7 +25,19 @@ VALUES
 (104, 2, 'c++', 80),
 (105, 3, 'java', 75),
 (106, 3, 'c++', 68);
-
+--join students and mark
 SELECT s.student_id, s.name, s.class, m.subject, m.marks
 FROM Students s
 JOIN Marks m ON s.student_id = m.student_id;
+ -- sub query to find top performer
+SELECT student_id, name, total_marks
+FROM (
+    SELECT s.student_id, s.name, SUM(m.marks) AS total_marks
+    FROM Students s
+    JOIN Marks m ON s.student_id = m.student_id
+    GROUP BY s.student_id, s.name
+) AS student_totals
+ORDER BY total_marks DESC
+LIMIT 1;
+
+
